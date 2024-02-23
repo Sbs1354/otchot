@@ -1,50 +1,55 @@
-<!-- <!DOCTYPE html> 
-<html> 
-<head> 
-  <title>лаба 13</title> 
- </head> 
-<body> 
-   <script src="./Untitled-1.js"></script> 
-   <linkrel="stylesheet" href="Новый текстовый документ.css"></linkrel> 
- 
-   <button class="button" onclick="openWindow1()">Открыть окно 1</button> 
-    <button class="button" onclick="openWindow2()">Открыть окно 2</button> 
-   <a href="https://www.bsuir.com" id="link">Перейти на другую страницу</a> 
-</body> 
-</html> 
-  -->
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="style1.css" id="pageStyle">
+  <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="style3.css">
+
+</head>
+<body>
+
+  <h1>Стендовый моделизм</h1>
+  <p>Стендовый моделизм - хобби, связанное с созданием масштабных моделей различных объектов.</p>
+  <img src="img1.jpg"><br>
+  <button id="changeStyleBtn">Изменить стиль</button><br>
+  <br><button id="changeOpacityBtn">Изменить прозрачность</button>
+  <ul id="list">
+    <li>текст 1</li>
+    <li>текст 2</li>
+    <li>текст 3</li>
+    <li>текст 4</li>
+  </ul>
+  <script src="script.js"></script>
 
 
 
 
-
-
-
-  <!-- задание 3 - лаба 13 по вариантам  -->
- 
-<!DOCTYPE html> 
-<head> 
-  <title>Версия и название браузера</title> 
-</head> 
-<body> 
-  <p>Ваш браузер: <span id="browserInfo"></span></p> 
-
+<!-- свое -->
+<a href="#">Ссылка 1</a>
+<a href="#">Ссылка 2</a>
+<a href="#">Ссылка 3</a>
+<a href="#">Ссылка 4</a>
+<a href="#">Ссылка 5</a>
 
 <script>
- // Получаем информацию о браузере
- let browserInfo = "Название: " + navigator.appName + ", Версия: " + navigator.appVersion;
- document.getElementById("browserInfo").innerText = browserInfo;
+let links = document.getElementsByTagName("a");
 
-//  Сценарий для вывода сообщения 3 раза
- for (let i = 0; i < 3; i++) {
-   document.write(browserInfo);
- }
+for (let i = 0; i < links.length; i++) {
+  links[i].onmouseover = function() {
+    let angle = 0;
+    let link = this;
+    let rotation = setInterval(function() {
+      angle += 3;
+      link.style.transform = "rotate(" + angle + "deg)";
+      if (angle > 360) {
+        angle = 0;
+      
+      }
+    }, 50);
+  };
+}
 </script>
 
-
-</body> 
+</body>
 </html>
-
-
-
-
