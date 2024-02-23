@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <title>Мой веб-документ</title>
+</head>
+<body>
+    <!-- Первый блок div1: Вывод всех дочерних узлов элемента body -->
+    <p>Дочерные узлы:</p>
+    <div id="div1"></div>
+
+    <!-- Второй блок div2: Вывод всех элементов документа -->
+    <p>Все элементы:</p>
+    <div id="div2"></div>
+
+    <script>
+        // Получаем ссылку на элемент body
+        const bodyElement = document.body;
+
+        // Получаем все дочерние узлы элемента body
+        const childNodes = bodyElement.childNodes;
+
+        // Выводим все дочерние узлы в первый блок div1
+        const div1 = document.getElementById('div1');
+        childNodes.forEach((node) => {
+            div1.innerHTML += `<p>${node.nodeName}</p>`;
+        });
+
+        // Получаем все элементы документа
+        const allElements = document.querySelectorAll('*');
+
+        // Выводим все элементы во второй блок div2
+        const div2 = document.getElementById('div2');
+        allElements.forEach((element) => {
+            div2.innerHTML += `<p>${element.nodeName}</p>`;
+        });
+    </script>
+</body>
+</html>
