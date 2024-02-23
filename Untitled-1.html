@@ -1,0 +1,50 @@
+<!-- <!DOCTYPE html> 
+<html> 
+<head> 
+  <title>лаба 13</title> 
+ </head> 
+<body> 
+   <script src="./Untitled-1.js"></script> 
+   <linkrel="stylesheet" href="Новый текстовый документ.css"></linkrel> 
+ 
+   <button class="button" onclick="openWindow1()">Открыть окно 1</button> 
+    <button class="button" onclick="openWindow2()">Открыть окно 2</button> 
+   <a href="https://www.bsuir.com" id="link">Перейти на другую страницу</a> 
+</body> 
+</html> 
+  -->
+
+
+
+
+
+
+
+  <!-- задание 3 - лаба 13 по вариантам  -->
+ 
+<!DOCTYPE html> 
+<head> 
+  <title>Версия и название браузера</title> 
+</head> 
+<body> 
+  <p>Ваш браузер: <span id="browserInfo"></span></p> 
+
+
+<script>
+ // Получаем информацию о браузере
+ let browserInfo = "Название: " + navigator.appName + ", Версия: " + navigator.appVersion;
+ document.getElementById("browserInfo").innerText = browserInfo;
+
+//  Сценарий для вывода сообщения 3 раза
+ for (let i = 0; i < 3; i++) {
+   document.write(browserInfo);
+ }
+</script>
+
+
+</body> 
+</html>
+
+
+
+
