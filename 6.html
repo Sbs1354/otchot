@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset="utf-8" /> 
+  <title>Изменение цвета текста</title> 
+  <style> 
+   .colortext { 
+     color: red;  
+   } 
+  </style> 
+  <title>:hover</title> 
+  <style> 
+   [data-tooltip] { 
+    position: relative;  
+   } 
+   [data-tooltip]::after { 
+    content: attr(data-tooltip);  
+    position: absolute;  
+    width: 300px; 
+    left: 0; top: 0;  
+    background: #3989c9;  
+    color: #2E8B57;  
+    padding: 0.5em; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  
+    pointer-events: none;  
+    opacity: 0;  
+    transition: 1s;  
+   }  
+   [data-tooltip]:hover::after { 
+    opacity: 1;  
+    top: 2em;  
+   } 
+  </style> 
+    <title>Регистрация на сайте поиска вакансий</title> 
+</head> 
+<body> 
+  <input type="checkbox" id="terms" name="terms" required> 
+        <label for="terms">Я согласен с условиями использования сайта</label><br><br> 
+ 
+    <p data-tooltip="тут должно было быть что то важное">Регистрация на сайте поиска вакансий </p> 
+    <form action="submit.php" method="post"> 
+        <label for="name">ФИО:</label> 
+        <input type="text" id="name" name="name" required><br><br> 
+ 
+        
+        <label for="working-sphere"><span class="colortext">Сфера деятельности:</label><br></span> 
+        <select id="working-sphere" name="working-sphere" multiple> 
+            <option value="инжинер">инжинер</option> 
+            <option value="врач">врач</option> 
+            <option value="военный">военный</option> 
+            <option value="сфера услуг (обслуживающий персонал)">сфера услуг (обслуживающий персонал)</option> 
+            <option value="политик">политик</option> 
+  <option value="повар">повар</option> 
+        </select><br><br> 
+ 
+        <label for="experience"><span class="colortext">Опыт работы:</label><br> 
+        <input type="radio" id="experience-beginner" name="experience" value="beginner"> 
+        <label for="experience-beginner">Начинающий (до года)</label><br> 
+        <input type="radio" id="experience-intermediate" name="experience" value="intermediate"> 
+        <label for="experience-intermediate">Средний (1-3 года)</label><br> 
+        <input type="radio" id="experience-advanced" name="experience" value="advanced"> 
+        <label for="experience-advanced">Продвинутый (от 4 лет)</label><br><br> 
+ 
+        <label for="about"><span class="colortext">Хобби и увлечения:</label><br> 
+        <textarea id="about" name="interests" rows="5" cols="30"></textarea><br><br> 
+ 
+       <label for="email"><span class="colortext">Контактный телефон или почта:</label> 
+        <input type="email" id="email" name="email" required><br><br> 
+ 
+        <label for="password">(ЕСЛИ ПОЧТА) Пароль:</label> 
+        <input type="password" id="password" name="password" required><br><br> 
+ 
+        <label for="confirm-password">Подтверждение пароля:</label> 
+        <input type="password" id="confirm-password" name="confirm-password" required><br><br> 
+ 
+        <input type="submit" value="Отправить заявку"> 
+
+    </form> 
+</body> 
+</html>
